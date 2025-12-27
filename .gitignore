@@ -17,12 +17,6 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 
-# Gradle
-.gradle/
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**
-!**/src/test/**
 
 # IntelliJ IDEA
 .idea/
@@ -34,49 +28,6 @@ build/
 *.swp
 *.swo
 
-# Eclipse
-.settings/
-.project
-.classpath
-*.tmp
-.factorypath
-
-# NetBeans
-.nbattrs
-.nb-gradle/
-
-# VS Code
-.vscode/
-
-# OS
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Logs
-logs/
-*.log
-!example.log
-log/
-logging/
-trace/
-*.logs
-
-# Spring Boot
-spring-boot-webpack/
-spring-boot-devtools/
-spring-boot-configuration-processor/
-
-# Application
-application.properties
-application.yml
-application-*.yml
-!application-example.yml
-!application-template.yml
 
 # Sensitive data
 *.env
@@ -89,22 +40,7 @@ secrets/
 credentials/
 config/**
 
-# Docker
-docker-compose.override.yml
-!docker-compose.yml
-.dockerignore
 
-# Kubernetes
-k8s/local/
-
-# Database
-*.db
-*.sql
-*.h2.db
-/db/
-/data/
-data/
-!data/example/
 
 # Tests
 coverage/
@@ -138,28 +74,7 @@ docs/_build/
 *.swp
 *.swo
 
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
 
-# Microservices specific
-**/target/**
-**/build/**
-**/out/
-**/.settings/
-**/.project
-**/.classpath
-
-# Application properties for different environments
-**/application-*.properties
-**/application-*.yml
-!**/application-example.*
-!**/application-template.*
 
 # Local development files
 *.local
@@ -178,18 +93,5 @@ profiler/
 *.hprof
 *.heapdump
 
-# Frontend (если есть)
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-dist/
-build-static/
-.webpack/
-
-# Specific for microservices architecture
-service-registry-data/
-config-server-data/
-*/
 
 *.http
