@@ -21,10 +21,12 @@ repositories {
 extra["springCloudVersion"] = "2025.1.0"
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-security-oauth2-client")
 	implementation("org.springframework.cloud:spring-cloud-starter-gateway-server-webflux")
-	testImplementation("org.springframework.boot:spring-boot-starter-security-oauth2-client-test")
+	implementation("org.springframework.boot:spring-boot-starter-security")
+	implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
+	implementation("org.springframework.boot:spring-boot-starter-security-oauth2-resource-server")
 	testImplementation("io.projectreactor:reactor-test")
+	testImplementation("org.springframework.security:spring-security-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 

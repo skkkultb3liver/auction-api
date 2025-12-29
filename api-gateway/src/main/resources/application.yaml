@@ -4,20 +4,10 @@ spring:
 
     security:
         oauth2:
-            client:
-                provider:
-                    keycloak:
-                        issuer-uri: http://${KEYCLOAK_HOST}:${KEYCLOAK_PORT:8080}/realms/${KC_REALM}
-                registration:
-                    keycloak:
-                        client-id: ${KC_CLIENT_ID}
-                        client-secret: ${KC_CLIENT_SECRET}
-                        scope:
-                            - openid
-                            - profile
-                            - email
-                        authorization-grant-type: authorization_code
-                        redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            resourceserver:
+                jwt:
+                    issuer-uri: http://${KEYCLOAK_HOST:localhost}:${KEYCLOAK_PORT:8080}/realms/${KC_REALM}
+
 
     cloud:
         gateway:
