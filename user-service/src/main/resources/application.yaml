@@ -1,0 +1,21 @@
+spring:
+    application:
+        name: user-service
+
+    security:
+        oauth2:
+            resourceserver:
+                jwt:
+                    issuer-uri: ${config.keycloak.url}/realms/${config.keycloak.realm}
+
+eureka:
+    client:
+        service-url:
+          defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka/
+
+config:
+    keycloak:
+        url: http://${KEYCLOAK_HOST:localhost}:${KEYCLOAK_PORT:8080}
+        realm: ${KC_REALM}
+        client_id: ${KC_USER_SERVICE_CLIENT_ID}
+        client_sercet: ${KC_USER_SERVICE_CLIENT_ID}
